@@ -1,3 +1,4 @@
+import sys
 from flask import Flask, redirect
 
 app = Flask(__name__)
@@ -29,4 +30,10 @@ def redirect_link(path):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+
+    if "-dev" in sys.argv:
+        app.run(debug=True)
+        
+    else:
+        from waitress import serve
+        serve(app, host="0.0.0.0", port=5000, threads=20)
