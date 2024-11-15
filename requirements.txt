@@ -1,1 +1,2 @@
-Flask==2.2.2  # Specify the version you want to use
+Flask==2.2.5  # Specify the version you want to use
+Werkzeug==2.2.2
