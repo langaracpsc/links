@@ -11,7 +11,8 @@ The code should be self documenting, please see main.py for details
 The code can be edited by anyone where needed.
 
 Dev:
-- run `main.py`
+- create a virtual environment and install `requirements.txt`
+- run `main.py -dev`
 
 Production:
 - `docker build -t flask-app .`
